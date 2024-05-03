@@ -24,12 +24,12 @@
 		// "allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
 		// "sourceMap": true,
-		// "paths": {
-		// 	// src
-		// 	"@/SRC/*": [
-		// 		"./src/*"
-		// 	],
-		// }
+		"paths": {
+			// src
+			"*": [
+				"./src/node_modules1/*"
+			],
+		}
 	},
 	// "exclude": [
 	// 	"./dist",
