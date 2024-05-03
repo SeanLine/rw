@@ -1,25 +1,25 @@
 {
 	"compilerOptions": {
-		// "baseUrl": ".",
-		// "outDir": "./dist",
-		// "strict": true,
-		// "experimentalDecorators": true,
-		// "forceConsistentCasingInFileNames": true,
-		// "moduleResolution": "node",
-		// "resolveJsonModule": true,
-		// "downlevelIteration": true,
-		// "isolatedModules": true,
-		// "noImplicitAny": true,
-		// "noUnusedLocals": true,
-		// "noUnusedParameters": true,
-		// "allowJs": true,
-		// "target": "es5",
-		// "module": "commonjs",
-		// "lib": [
-		// 	"dom",
-		// 	"dom.iterable",
-		// 	"esnext"
-		// ],
+		"baseUrl": ".",
+		"outDir": "./dist",
+		"strict": true,
+		"experimentalDecorators": true,
+		"forceConsistentCasingInFileNames": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"downlevelIteration": true,
+		"isolatedModules": true,
+		"noImplicitAny": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"allowJs": true,
+		"target": "es5",
+		"module": "commonjs",
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
 		"jsx": "react",
 		// "allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
@@ -31,9 +31,9 @@
 			],
 		}
 	},
-	// "exclude": [
-	// 	"./dist",
-	// 	"node_modules",
-	// 	"./config"
-	// ]
+	"exclude": [
+		"./dist",
+		"node_modules",
+		"./config"
+	]
 }
