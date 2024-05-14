@@ -10,11 +10,11 @@ module.exports = {
     'import/resolver': {
       typescript: {
         project: ['tsconfig.json'],
-        extensions: ['.tsx', '.ts', '.js', '.jsx'],
+        extensions: ['.tsx', '.ts', '.js'],
       },
       node: {
         project: ['tsconfig.json'],
-        extensions: ['.tsx', '.ts', '.js', '.jsx'],
+        extensions: ['.tsx', '.ts', '.js'],
       },
     },
     react: {
