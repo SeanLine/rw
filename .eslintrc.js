@@ -4,7 +4,6 @@ module.exports = {
   plugins: ['import'],
   rules: {
     'import/no-unresolved': 2,
-    'max-lines': ['error', { max: 2 }],
   },
   settings: {
     'import/resolver': {
