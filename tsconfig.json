@@ -27,7 +27,7 @@
 		"paths": {
 			// src
 			"*": [
-				"./src/node_modules1/*"
+				"apps/package-a/src/node_modules1/*"
 			],
 		}
 	},

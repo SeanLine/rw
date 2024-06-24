@@ -1,6 +1,6 @@
 {
 	"$schema": "https://turbo.build/schema.json",
-	"tasks": {
+	"pipeline": {
 		"build": {
 			"dependsOn": [
 				"^build"
@@ -9,8 +9,10 @@
 				"dist/**"
 			]
 		},
-		"dev": {
-			"cache": false
+		"start": {
+			"cache": false,
+			"persistent": true,
+			"outputMode": "full"
 		}
 	}
 }

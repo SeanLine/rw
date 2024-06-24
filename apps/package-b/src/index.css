@@ -1,0 +1,16 @@
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  line-clamp: 1;
+  /* display: -webkit-box; */
+  /* overflow: hidden;
+  word-break: break-all; */
+  /* -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; */
+  width: 300px;
+}
+
+.children {
+  display: flex;
+  flex-wrap: nowrap;
+}
