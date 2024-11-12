@@ -15,6 +15,7 @@
 		"allowJs": true,
 		"target": "es5",
 		"module": "commonjs",
+		"sourceMap": true,
 		"lib": [
 			"dom",
 			"dom.iterable",
