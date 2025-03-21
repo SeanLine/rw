@@ -4,7 +4,12 @@ import axios from 'axios'
 
 import Request2 from './Request2'
 
+const FlexEllipsis = React.lazy(
+  () => import('package_b/src/FlexEllipsis') as Promise<{ default: React.FC }>
+)
+
 const Request = () => {
+  const [isVisible, setVisible] = React.useState(false)
   const requestFunc = () => {
     // axios
     //   .post('http://localhost:8080/', {
@@ -57,6 +62,16 @@ const Request = () => {
     <>
       <Button onClick={requestFunc}>Request</Button>
       <Request2 />
+      <div style={{ padding: '1rem' }}>
+        <button onClick={() => setVisible(value => !value)}>Toggle Content</button>
+      </div>
+      <div style={{ padding: '1rem' }}>
+        {isVisible && (
+          <React.Suspense fallback={<h1>Loading....</h1>}>
+            <FlexEllipsis />
+          </React.Suspense>
+        )}
+      </div>
     </>
   )
 }

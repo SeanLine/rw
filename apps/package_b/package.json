@@ -1,5 +1,5 @@
 {
-	"name": "package-b",
+	"name": "package_b",
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {

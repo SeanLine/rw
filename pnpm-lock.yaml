@@ -73,10 +73,10 @@ importers:
       webpack-cli: 5.1.4_tu4shvjzpzktch376vvlofy4ce
       webpack-dev-server: 5.0.4_4yjhntpk3sdhvzipka3i6ipg6a
 
-  apps/package-a:
+  apps/package_a:
     specifiers: {}
 
-  apps/package-b:
+  apps/package_b:
     specifiers: {}
 
 packages:

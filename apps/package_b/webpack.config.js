@@ -1,10 +1,11 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { ModuleFederationPlugin } = require('webpack').container
+const deps = require('../../package.json').dependencies
 
 module.exports = {
   entry: './src/index.tsx',
   mode: 'development',
-  devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -23,7 +24,6 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react'],
-            sourceMaps: true,
           },
         },
       },
@@ -35,13 +35,21 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: '../../public/index.html',
+    // new HtmlWebpackPlugin({
+    //   template: '../../public/index.html',
+    // }),
+    new ModuleFederationPlugin({
+      name: 'package_b',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './src/FlexEllipsis': './src/FlexEllipsis',
+      },
+      // shared: [{ react: deps.react, 'react-dom': deps['react-dom'] }],
     }),
   ],
   devServer: {
     static: path.join(__dirname, 'dist'),
-    port: 3000,
+    port: 3001,
     hot: true,
   },
   resolve: {
