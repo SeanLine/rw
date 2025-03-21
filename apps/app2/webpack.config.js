@@ -6,6 +6,7 @@ const deps = require('../../package.json').dependencies
 module.exports = {
   entry: './src/index.tsx',
   mode: 'development',
+  devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -39,12 +40,11 @@ module.exports = {
     //   template: '../../public/index.html',
     // }),
     new ModuleFederationPlugin({
-      name: 'package_b',
+      name: 'app2',
       filename: 'remoteEntry.js',
       exposes: {
         './src/FlexEllipsis': './src/FlexEllipsis',
       },
-      // shared: [{ react: deps.react, 'react-dom': deps['react-dom'] }],
     }),
   ],
   devServer: {

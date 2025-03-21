@@ -6,7 +6,7 @@ const deps = require('../../package.json').dependencies
 module.exports = {
   entry: './src/index.tsx',
   mode: 'development',
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -37,16 +37,16 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: '../../public/index.html',
-    }),
     new ModuleFederationPlugin({
-      name: 'package_a',
+      name: 'app1',
       filename: 'remoteEntry.js',
       remotes: {
-        package_b: 'package_b@http://localhost:3001/remoteEntry.js',
+        app2: 'app2@http://localhost:3001/remoteEntry.js',
       },
       // shared: [{ react: deps.react, 'react-dom': deps['react-dom'] }],
+    }),
+    new HtmlWebpackPlugin({
+      template: '../../public/index.html',
     }),
   ],
   devServer: {

@@ -3,10 +3,11 @@ import { Button } from 'antd'
 import axios from 'axios'
 
 import Request2 from './Request2'
+import FlexEllipsis from 'app2/src/FlexEllipsis'
 
-const FlexEllipsis = React.lazy(
-  () => import('package_b/src/FlexEllipsis') as Promise<{ default: React.FC }>
-)
+// const FlexEllipsis = React.lazy(
+//   () => import('app2/src/FlexEllipsis') as Promise<{ default: React.FC }>
+// )
 
 const Request = () => {
   const [isVisible, setVisible] = React.useState(false)
@@ -65,13 +66,7 @@ const Request = () => {
       <div style={{ padding: '1rem' }}>
         <button onClick={() => setVisible(value => !value)}>Toggle Content</button>
       </div>
-      <div style={{ padding: '1rem' }}>
-        {isVisible && (
-          <React.Suspense fallback={<h1>Loading....</h1>}>
-            <FlexEllipsis />
-          </React.Suspense>
-        )}
-      </div>
+      <div style={{ padding: '1rem' }}>{isVisible && <FlexEllipsis />}</div>
     </>
   )
 }
